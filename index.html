@@ -1,9 +1,7 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
 
     <meta
@@ -21,19 +19,10 @@
         content="Andrés Lanchimba"
     >
 
-    <title>
-        Andrés Lanchimba | Computer Science & Economics
-    </title>
+    <title>Andrés Lanchimba | Computer Science & Economics</title>
 
-
-    <!-- =========================
-         FONTS
-    ========================== -->
-
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link
         rel="preconnect"
@@ -46,21 +35,15 @@
         rel="stylesheet"
     >
 
-
-    <!-- =========================
-         CSS
-    ========================== -->
-
+    <!-- CSS -->
     <link
         rel="stylesheet"
-        href="css/style.css"
+        href="./css/style.css"
     >
-
 </head>
 
 
 <body>
-
 
     <!-- =====================================================
          NAVIGATION
@@ -70,21 +53,19 @@
 
         <div class="container nav-container">
 
-
-            <!-- Logo -->
-
             <a
                 href="#home"
                 class="logo"
+                aria-label="Home"
             >
                 AL<span>.</span>
             </a>
 
-<<<<<<< HEAD
 
-            <!-- Navigation -->
-
-            <nav class="nav-links">
+            <nav
+                class="nav-links"
+                aria-label="Main navigation"
+            >
 
                 <a
                     href="#about"
@@ -117,19 +98,20 @@
             </nav>
 
 
-            <!-- Navigation Actions -->
-
             <div class="nav-actions">
 
+                <!-- Language selector -->
 
-                <!-- Language -->
-
-                <div class="language-switcher">
+                <div
+                    class="language-switcher"
+                    aria-label="Language selector"
+                >
 
                     <button
+                        type="button"
                         id="lang-en"
                         class="language-btn active"
-                        type="button"
+                        aria-label="English"
                     >
                         EN
                     </button>
@@ -137,17 +119,16 @@
                     <span>|</span>
 
                     <button
+                        type="button"
                         id="lang-es"
                         class="language-btn"
-                        type="button"
+                        aria-label="Español"
                     >
                         ES
                     </button>
 
                 </div>
 
-
-                <!-- Resume -->
 
                 <a
                     href="#"
@@ -161,38 +142,7 @@
 
         </div>
 
-=======
-
-<nav class="nav-links">
-    <a href="#about" data-i18n="nav.about">About</a>
-    <a href="#projects" data-i18n="nav.projects">Projects</a>
-    <a href="#skills" data-i18n="nav.skills">Skills</a>
-    <a href="#contact" data-i18n="nav.contact">Contact</a>
-</nav>
-
-<div class="nav-actions">
-
-    <div class="language-switcher">
-        <button id="lang-en" class="language-btn active">
-            EN
-        </button>
-
-        <span>|</span>
-
-        <button id="lang-es" class="language-btn">
-            ES
-        </button>
-    </div>
-
-    <a href="#" class="nav-resume" data-i18n="nav.resume">
-        Resume
-    </a>
-
-</div>
-
->>>>>>> 57d24c018f431c9cc81f633883d3660fc4600941
     </header>
-
 
 
     <!-- =====================================================
@@ -213,11 +163,7 @@
 
             <div class="container hero-container">
 
-
                 <div class="hero-content">
-
-
-                    <!-- Eyebrow -->
 
                     <p
                         class="eyebrow reveal"
@@ -227,8 +173,6 @@
                     </p>
 
 
-                    <!-- Main title -->
-
                     <h1 class="hero-title reveal">
 
                         <span data-i18n="hero.title1">
@@ -236,7 +180,7 @@
                         </span>
 
                         <span data-i18n="hero.title2">
-                            & Economics
+                            &amp; Economics
                         </span>
 
                         <span data-i18n="hero.title3">
@@ -245,8 +189,6 @@
 
                     </h1>
 
-
-                    <!-- Description -->
 
                     <p
                         class="hero-description reveal"
@@ -257,10 +199,7 @@
                     </p>
 
 
-                    <!-- Buttons -->
-
                     <div class="hero-buttons reveal">
-
 
                         <a
                             href="https://github.com/lanchandres"
@@ -286,8 +225,6 @@
                 </div>
 
 
-                <!-- Status -->
-
                 <div class="hero-status reveal">
 
                     <span class="status-dot"></span>
@@ -303,7 +240,6 @@
         </section>
 
 
-
         <!-- =================================================
              ABOUT
         ================================================== -->
@@ -314,9 +250,6 @@
         >
 
             <div class="container">
-
-
-                <!-- Section title -->
 
                 <div class="section-heading reveal">
 
@@ -333,11 +266,7 @@
 
                 <div class="about-grid">
 
-
-                    <!-- About text -->
-
                     <div class="about-text reveal">
-
 
                         <p data-i18n="about.paragraph1">
                             I am a Computer Science and Economics student
@@ -345,14 +274,12 @@
                             and problem solving.
                         </p>
 
-
                         <p data-i18n="about.paragraph2">
                             Throughout my university experience, I have worked
                             on projects involving programming, backend
                             development, data analysis, econometrics,
                             computer architecture, and software engineering.
                         </p>
-
 
                         <p data-i18n="about.paragraph3">
                             I enjoy learning new technologies and turning
@@ -362,10 +289,7 @@
                     </div>
 
 
-                    <!-- Information -->
-
                     <div class="about-info reveal">
-
 
                         <div class="info-item">
 
@@ -386,8 +310,8 @@
                                 Field
                             </span>
 
-                            <strong>
-                                Computer Science & Economics
+                            <strong data-i18n="about.fieldValue">
+                                Computer Science &amp; Economics
                             </strong>
 
                         </div>
@@ -427,7 +351,6 @@
         </section>
 
 
-
         <!-- =================================================
              PROJECTS
         ================================================== -->
@@ -438,9 +361,6 @@
         >
 
             <div class="container">
-
-
-                <!-- Section title -->
 
                 <div class="section-heading reveal">
 
@@ -455,15 +375,12 @@
                 </div>
 
 
-                <!-- Projects grid -->
-
                 <div class="projects-grid">
 
 
-                    <!-- PROJECT 01 -->
+                    <!-- PROJECT 1 -->
 
                     <article class="project-card reveal">
-
 
                         <div class="project-top">
 
@@ -471,12 +388,12 @@
                                 01
                             </span>
 
-
                             <a
                                 href="https://github.com/lanchandres"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 class="project-link"
+                                aria-label="Open project"
                             >
                                 ↗
                             </a>
@@ -497,32 +414,19 @@
 
                         <div class="project-tags">
 
-                            <span>
-                                Python
-                            </span>
-
-                            <span>
-                                FastAPI
-                            </span>
-
-                            <span>
-                                Streamlit
-                            </span>
-
-                            <span>
-                                Docker
-                            </span>
+                            <span>Python</span>
+                            <span>FastAPI</span>
+                            <span>Streamlit</span>
+                            <span>Docker</span>
 
                         </div>
 
                     </article>
 
 
-
-                    <!-- PROJECT 02 -->
+                    <!-- PROJECT 2 -->
 
                     <article class="project-card reveal">
-
 
                         <div class="project-top">
 
@@ -530,12 +434,12 @@
                                 02
                             </span>
 
-
                             <a
                                 href="https://github.com/lanchandres"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 class="project-link"
+                                aria-label="Open project"
                             >
                                 ↗
                             </a>
@@ -556,32 +460,19 @@
 
                         <div class="project-tags">
 
-                            <span>
-                                Python
-                            </span>
-
-                            <span>
-                                Pandas
-                            </span>
-
-                            <span>
-                                Econometrics
-                            </span>
-
-                            <span>
-                                Data Analysis
-                            </span>
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>Econometrics</span>
+                            <span>Data Analysis</span>
 
                         </div>
 
                     </article>
 
 
-
-                    <!-- PROJECT 03 -->
+                    <!-- PROJECT 3 -->
 
                     <article class="project-card reveal">
-
 
                         <div class="project-top">
 
@@ -589,12 +480,12 @@
                                 03
                             </span>
 
-
                             <a
                                 href="https://github.com/lanchandres"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 class="project-link"
+                                aria-label="Open project"
                             >
                                 ↗
                             </a>
@@ -615,21 +506,10 @@
 
                         <div class="project-tags">
 
-                            <span>
-                                Java
-                            </span>
-
-                            <span>
-                                C++
-                            </span>
-
-                            <span>
-                                Python
-                            </span>
-
-                            <span>
-                                Git
-                            </span>
+                            <span>Java</span>
+                            <span>C++</span>
+                            <span>Python</span>
+                            <span>Git</span>
 
                         </div>
 
@@ -640,7 +520,6 @@
             </div>
 
         </section>
-
 
 
         <!-- =================================================
@@ -654,9 +533,6 @@
 
             <div class="container">
 
-
-                <!-- Section title -->
-
                 <div class="section-heading reveal">
 
                     <p class="section-number">
@@ -664,7 +540,7 @@
                     </p>
 
                     <h2 data-i18n="skills.title">
-                        Skills & Technologies
+                        Skills &amp; Technologies
                     </h2>
 
                 </div>
@@ -673,14 +549,13 @@
                 <div class="skills-grid reveal">
 
 
-                    <!-- Languages -->
+                    <!-- LANGUAGES -->
 
                     <div class="skill-category">
 
                         <h3 data-i18n="skills.languages">
                             Languages
                         </h3>
-
 
                         <div class="skill-list">
 
@@ -695,15 +570,13 @@
                     </div>
 
 
-
-                    <!-- Development -->
+                    <!-- DEVELOPMENT -->
 
                     <div class="skill-category">
 
                         <h3 data-i18n="skills.development">
                             Development
                         </h3>
-
 
                         <div class="skill-list">
 
@@ -718,15 +591,13 @@
                     </div>
 
 
-
-                    <!-- Data -->
+                    <!-- DATA -->
 
                     <div class="skill-category">
 
                         <h3 data-i18n="skills.data">
                             Data
                         </h3>
-
 
                         <div class="skill-list">
 
@@ -746,7 +617,6 @@
         </section>
 
 
-
         <!-- =================================================
              CONTACT
         ================================================== -->
@@ -758,7 +628,6 @@
 
             <div class="container contact-container reveal">
 
-
                 <p class="section-number">
                     04
                 </p>
@@ -769,14 +638,15 @@
                 </h2>
 
 
-                <p data-i18n="contact.description">
+                <p
+                    data-i18n="contact.description"
+                >
                     I'm currently preparing for internship opportunities
                     and would love to connect.
                 </p>
 
 
                 <div class="contact-links">
-
 
                     <a
                         href="https://github.com/lanchandres"
@@ -786,15 +656,12 @@
                         GitHub ↗
                     </a>
 
-
                     <a
                         href="#"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        aria-label="LinkedIn"
                     >
                         LinkedIn ↗
                     </a>
-
 
                     <a
                         href="mailto:YOUR_EMAIL@example.com"
@@ -811,7 +678,6 @@
     </main>
 
 
-
     <!-- =====================================================
          FOOTER
     ====================================================== -->
@@ -820,12 +686,12 @@
 
         <div class="container footer-container">
 
-            <span>
+            <span class="copyright">
                 © 2026 Andrés Lanchimba
             </span>
 
-            <span>
-                Built with HTML, CSS & JavaScript
+            <span data-i18n="footer.built">
+                Built with HTML, CSS &amp; JavaScript
             </span>
 
         </div>
@@ -833,18 +699,12 @@
     </footer>
 
 
-
     <!-- =====================================================
          JAVASCRIPT
     ====================================================== -->
 
-    <script src="js/script.js"></script>
+    <script src="./js/script.js"></script>
 
 </body>
-<<<<<<< HEAD
-=======
-</html>
-
->>>>>>> 57d24c018f431c9cc81f633883d3660fc4600941
 
 </html>
