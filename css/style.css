@@ -1,0 +1,821 @@
+
+/* =========================================================
+   ANDRÉS LANCHIMBA — PORTFOLIO
+   Main Stylesheet
+   ========================================================= */
+
+
+/* =========================
+   1. VARIABLES
+   ========================= */
+
+:root {
+    --bg-main: #0d1117;
+    --bg-secondary: #11161d;
+    --bg-card: #161b22;
+
+    --border: rgba(88, 166, 255, 0.14);
+    --border-hover: rgba(88, 166, 255, 0.45);
+
+    --text-primary: #f0f6fc;
+    --text-secondary: #8b949e;
+    --text-muted: #6e7681;
+
+    --accent: #58a6ff;
+    --accent-soft: rgba(88, 166, 255, 0.1);
+
+    --max-width: 1120px;
+
+    --transition: 0.3s ease;
+}
+
+
+/* =========================
+   2. RESET
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-main);
+    color: var(--text-primary);
+
+    font-family: "Inter", sans-serif;
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   3. GENERAL ELEMENTS
+   ========================= */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(90%, var(--max-width));
+    margin: 0 auto;
+}
+
+.section {
+    padding: 120px 0;
+}
+
+
+/* =========================
+   4. NAVIGATION
+   ========================= */
+
+.navbar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background: rgba(13, 17, 23, 0.8);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.nav-container {
+    height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: "JetBrains Mono", monospace;
+
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    gap: 34px;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+
+    font-size: 0.9rem;
+
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--text-primary);
+}
+
+.nav-resume {
+    border: 1px solid var(--border);
+
+    padding: 8px 16px;
+
+    border-radius: 6px;
+
+    font-family: "JetBrains Mono", monospace;
+
+    font-size: 0.8rem;
+
+    color: var(--accent);
+
+    transition: var(--transition);
+}
+
+.nav-resume:hover {
+    background: var(--accent-soft);
+
+    border-color: var(--border-hover);
+}
+
+
+/* =========================
+   5. HERO
+   ========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* subtle background glow */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    top: -200px;
+    right: -200px;
+
+    background: radial-gradient(
+        circle,
+        rgba(88, 166, 255, 0.08),
+        transparent 65%
+    );
+
+    pointer-events: none;
+}
+
+.hero-container {
+    position: relative;
+
+    padding-top: 80px;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.eyebrow {
+    font-family: "JetBrains Mono", monospace;
+
+    color: var(--accent);
+
+    font-size: 0.85rem;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 7vw, 5.8rem);
+
+    line-height: 1.05;
+
+    letter-spacing: -4px;
+
+    font-weight: 700;
+
+    margin-bottom: 30px;
+}
+
+.hero-title span {
+    color: var(--accent);
+}
+
+.hero-description {
+    max-width: 650px;
+
+    color: var(--text-secondary);
+
+    font-size: 1.1rem;
+
+    margin-bottom: 38px;
+}
+
+.hero-buttons {
+    display: flex;
+
+    gap: 14px;
+}
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 22px;
+
+    border-radius: 6px;
+
+    font-size: 0.9rem;
+
+    font-weight: 500;
+
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background: var(--accent);
+
+    color: #07111d;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 30px rgba(88, 166, 255, 0.15);
+}
+
+.btn-secondary {
+    border: 1px solid var(--border);
+
+    color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+    border-color: var(--border-hover);
+
+    background: var(--accent-soft);
+
+    transform: translateY(-2px);
+}
+
+.hero-status {
+    position: absolute;
+
+    right: 0;
+    bottom: 30px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    font-family: "JetBrains Mono", monospace;
+
+    font-size: 0.72rem;
+
+    color: var(--text-muted);
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+
+    background: var(--accent);
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 12px rgba(88, 166, 255, 0.7);
+
+    animation: pulse 2.5s infinite;
+}
+
+
+/* =========================
+   6. SECTION HEADINGS
+   ========================= */
+
+.section-heading {
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 18px;
+
+    margin-bottom: 55px;
+}
+
+.section-number {
+    font-family: "JetBrains Mono", monospace;
+
+    color: var(--accent);
+
+    font-size: 0.8rem;
+}
+
+.section-heading h2 {
+    font-size: 2rem;
+
+    letter-spacing: -1px;
+}
+
+
+/* =========================
+   7. ABOUT
+   ========================= */
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns: 1.4fr 1fr;
+
+    gap: 100px;
+}
+
+.about-text p {
+    color: var(--text-secondary);
+
+    margin-bottom: 22px;
+
+    font-size: 1rem;
+}
+
+.about-info {
+    border-left: 1px solid var(--border);
+
+    padding-left: 35px;
+}
+
+.info-item {
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 28px;
+}
+
+.info-item span {
+    font-family: "JetBrains Mono", monospace;
+
+    color: var(--text-muted);
+
+    font-size: 0.7rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 5px;
+}
+
+.info-item strong {
+    font-size: 0.95rem;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   8. PROJECTS
+   ========================= */
+
+.projects-section {
+    background: var(--bg-secondary);
+}
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.project-card {
+    background: var(--bg-card);
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    padding: 30px;
+
+    min-height: 330px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--border-hover);
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.project-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 45px;
+}
+
+.project-number {
+    font-family: "JetBrains Mono", monospace;
+
+    color: var(--accent);
+
+    font-size: 0.75rem;
+}
+
+.project-link {
+    color: var(--text-muted);
+
+    font-size: 1.3rem;
+
+    transition: var(--transition);
+}
+
+.project-link:hover {
+    color: var(--accent);
+
+    transform: translate(3px, -3px);
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: var(--text-secondary);
+
+    font-size: 0.9rem;
+
+    margin-bottom: 25px;
+}
+
+.project-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: auto;
+}
+
+.project-tags span {
+    font-family: "JetBrains Mono", monospace;
+
+    color: var(--text-muted);
+
+    background: rgba(255, 255, 255, 0.03);
+
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    padding: 5px 8px;
+
+    border-radius: 4px;
+
+    font-size: 0.65rem;
+}
+
+
+/* =========================
+   9. SKILLS
+   ========================= */
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.skill-category {
+    padding: 28px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    background: var(--bg-card);
+}
+
+.skill-category h3 {
+    font-size: 0.95rem;
+
+    margin-bottom: 22px;
+}
+
+.skill-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.skill-list span {
+    color: var(--text-secondary);
+
+    font-size: 0.8rem;
+
+    padding: 6px 9px;
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    border-radius: 4px;
+}
+
+
+/* =========================
+   10. CONTACT
+   ========================= */
+
+.contact-section {
+    background: var(--bg-secondary);
+
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 700px;
+}
+
+.contact-container .section-number {
+    margin-bottom: 20px;
+}
+
+.contact-container h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+
+    letter-spacing: -2px;
+
+    margin-bottom: 20px;
+}
+
+.contact-container > p:not(.section-number) {
+    color: var(--text-secondary);
+
+    margin-bottom: 35px;
+}
+
+.contact-links {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+}
+
+.contact-links a {
+    color: var(--accent);
+
+    font-family: "JetBrains Mono", monospace;
+
+    font-size: 0.8rem;
+
+    transition: var(--transition);
+}
+
+.contact-links a:hover {
+    color: var(--text-primary);
+}
+
+
+/* =========================
+   11. FOOTER
+   ========================= */
+
+.footer {
+    padding: 30px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.footer-container {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color: var(--text-muted);
+
+    font-family: "JetBrains Mono", monospace;
+
+    font-size: 0.65rem;
+}
+
+
+/* =========================
+   12. ANIMATIONS
+   ========================= */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+@keyframes pulse {
+
+    0% {
+        opacity: 0.5;
+
+        transform: scale(0.9);
+    }
+
+    50% {
+        opacity: 1;
+
+        transform: scale(1.15);
+    }
+
+    100% {
+        opacity: 0.5;
+
+        transform: scale(0.9);
+    }
+}
+
+
+/* =========================
+   13. RESPONSIVE
+   ========================= */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .hero-title {
+        letter-spacing: -2px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .about-info {
+        border-left: none;
+
+        border-top: 1px solid var(--border);
+
+        padding-left: 0;
+
+        padding-top: 30px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-status {
+        position: static;
+
+        margin-top: 70px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .section {
+        padding: 85px 0;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-resume {
+        margin-left: auto;
+
+        margin-right: 15px;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        min-height: 300px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+
+        text-align: center;
+    }
+}
+
+
+/* =========================
+   14. ACCESSIBILITY
+   ========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal {
+        opacity: 1;
+
+        transform: none;
+    }
+}
