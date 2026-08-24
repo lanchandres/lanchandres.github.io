@@ -1,11 +1,4 @@
-/* =========================================================
-   ANDRÉS LANCHIMBA
-   PORTFOLIO JAVASCRIPT
-========================================================= */
-
-
-document.addEventListener("DOMContentLoaded", function () {
-
+document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
        TRANSLATIONS
@@ -13,475 +6,278 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const translations = {
 
-        /* =================================================
-           ENGLISH
-        ================================================= */
-
         en: {
+            "nav.about": "About",
+            "nav.projects": "Projects",
+            "nav.skills": "Skills",
+            "nav.contact": "Contact",
+            "nav.resume": "Resume",
 
-            nav: {
+            "hero.eyebrow": "HELLO, I'M ANDRÉS",
+            "hero.title1": "Computer Science",
+            "hero.title2": "& Economics",
+            "hero.title3": "Student.",
+            "hero.description":
+                "I build software, analyze data, and solve complex problems through technology and computational thinking.",
+            "hero.github": "GitHub",
+            "hero.projects": "View Projects",
+            "hero.status":
+                "Open to internship opportunities",
 
-                about: "About",
+            "about.title": "About Me",
 
-                projects: "Projects",
+            "about.paragraph1":
+                "I am a Computer Science and Economics student interested in software development, data analysis, and problem solving.",
 
-                skills: "Skills",
+            "about.paragraph2":
+                "Throughout my university experience, I have worked on projects involving programming, backend development, data analysis, econometrics, computer architecture, and software engineering.",
 
-                contact: "Contact",
+            "about.paragraph3":
+                "I enjoy learning new technologies and turning theoretical concepts into practical solutions.",
 
-                resume: "Resume"
+            "about.education": "Education",
+            "about.field": "Field",
+            "about.fieldValue":
+                "Computer Science & Economics",
+            "about.status": "Status",
+            "about.semester": "7th Semester",
+            "about.location": "Location",
 
-            },
+            "projects.title": "Featured Projects",
 
+            "projects.tictactoe.title":
+                "Tic Tac Toe",
 
-            hero: {
+            "projects.tictactoe.description":
+                "Full-stack implementation of a Tic Tac Toe game using a REST API and a separate frontend.",
 
-                eyebrow:
-                    "HELLO, I'M ANDRÉS",
+            "projects.census.title":
+                "Ecuador Census Analysis",
 
-                title1:
-                    "Computer Science",
+            "projects.census.description":
+                "Data analysis project using Ecuador's census data to study socioeconomic and demographic variables.",
 
-                title2:
-                    "& Economics",
+            "projects.software.title":
+                "Software Projects",
 
-                title3:
-                    "Student.",
+            "projects.software.description":
+                "Collection of academic projects developed during my Computer Science studies.",
 
-                description:
-                    "I build software, analyze data, and solve complex problems through technology and computational thinking.",
+            "skills.title":
+                "Skills & Technologies",
 
-                github:
-                    "GitHub",
+            "skills.languages":
+                "Languages",
 
-                projects:
-                    "View Projects",
+            "skills.development":
+                "Development",
 
-                status:
-                    "Open to internship opportunities"
+            "skills.data":
+                "Data",
 
-            },
+            "contact.title":
+                "Let's Connect.",
 
+            "contact.description":
+                "I'm currently preparing for internship opportunities and would love to connect.",
 
-            about: {
-
-                title:
-                    "About Me",
-
-                paragraph1:
-                    "I am a Computer Science and Economics student interested in software development, data analysis, and problem solving.",
-
-                paragraph2:
-                    "Throughout my university experience, I have worked on projects involving programming, backend development, data analysis, econometrics, computer architecture, and software engineering.",
-
-                paragraph3:
-                    "I enjoy learning new technologies and turning theoretical concepts into practical solutions.",
-
-                education:
-                    "Education",
-
-                field:
-                    "Field",
-
-                fieldValue:
-                    "Computer Science & Economics",
-
-                status:
-                    "Status",
-
-                semester:
-                    "7th Semester",
-
-                location:
-                    "Location"
-
-            },
-
-
-            projects: {
-
-                title:
-                    "Featured Projects",
-
-
-                tictactoe: {
-
-                    title:
-                        "Tic Tac Toe",
-
-                    description:
-                        "Full-stack implementation of a Tic Tac Toe game using a REST API and a separate frontend."
-
-                },
-
-
-                census: {
-
-                    title:
-                        "Ecuador Census Analysis",
-
-                    description:
-                        "Data analysis project using Ecuador's census data to study socioeconomic and demographic variables."
-
-                },
-
-
-                software: {
-
-                    title:
-                        "Software Projects",
-
-                    description:
-                        "Collection of academic projects developed during my Computer Science studies."
-
-                }
-
-            },
-
-
-            skills: {
-
-                title:
-                    "Skills & Technologies",
-
-                languages:
-                    "Languages",
-
-                development:
-                    "Development",
-
-                data:
-                    "Data"
-
-            },
-
-
-            contact: {
-
-                title:
-                    "Let's Connect.",
-
-                description:
-                    "I'm currently preparing for internship opportunities and would love to connect."
-
-            },
-
-
-            footer: {
-
-                built:
-                    "Built with HTML, CSS & JavaScript"
-
-            }
-
+            "footer.built":
+                "Built with HTML, CSS & JavaScript"
         },
 
 
-        /* =================================================
-           SPANISH
-        ================================================= */
-
         es: {
+            "nav.about": "Sobre mí",
+            "nav.projects": "Proyectos",
+            "nav.skills": "Habilidades",
+            "nav.contact": "Contacto",
+            "nav.resume": "CV",
 
-            nav: {
+            "hero.eyebrow": "HOLA, SOY ANDRÉS",
+            "hero.title1": "Estudiante de",
+            "hero.title2": "Computación",
+            "hero.title3": "y Economía.",
 
-                about:
-                    "Sobre mí",
+            "hero.description":
+                "Desarrollo software, analizo datos y resuelvo problemas complejos mediante tecnología y pensamiento computacional.",
 
-                projects:
-                    "Proyectos",
+            "hero.github": "GitHub",
+            "hero.projects": "Ver proyectos",
 
-                skills:
-                    "Habilidades",
+            "hero.status":
+                "Disponible para oportunidades de pasantías",
 
-                contact:
-                    "Contacto",
+            "about.title":
+                "Sobre mí",
 
-                resume:
-                    "CV"
+            "about.paragraph1":
+                "Soy estudiante de Ciencias de la Computación y Economía, interesado en el desarrollo de software, análisis de datos y resolución de problemas.",
 
-            },
+            "about.paragraph2":
+                "Durante mi trayectoria universitaria he trabajado en proyectos relacionados con programación, desarrollo backend, análisis de datos, econometría, arquitectura de computadores e ingeniería de software.",
 
+            "about.paragraph3":
+                "Me gusta aprender nuevas tecnologías y transformar conceptos teóricos en soluciones prácticas.",
 
-            hero: {
+            "about.education":
+                "Educación",
 
-                eyebrow:
-                    "HOLA, SOY ANDRÉS",
+            "about.field":
+                "Carrera",
 
-                title1:
-                    "Estudiante de",
+            "about.fieldValue":
+                "Ciencias de la Computación y Economía",
 
-                title2:
-                    "Computación",
+            "about.status":
+                "Estado",
 
-                title3:
-                    "y Economía.",
+            "about.semester":
+                "Séptimo semestre",
 
-                description:
-                    "Desarrollo software, analizo datos y resuelvo problemas complejos mediante tecnología y pensamiento computacional.",
+            "about.location":
+                "Ubicación",
 
-                github:
-                    "GitHub",
+            "projects.title":
+                "Proyectos destacados",
 
-                projects:
-                    "Ver proyectos",
+            "projects.tictactoe.title":
+                "Tres en Raya",
 
-                status:
-                    "Disponible para oportunidades de pasantías"
+            "projects.tictactoe.description":
+                "Implementación full-stack de un juego de Tres en Raya utilizando una API REST y un frontend independiente.",
 
-            },
+            "projects.census.title":
+                "Análisis del Censo de Ecuador",
 
+            "projects.census.description":
+                "Proyecto de análisis de datos utilizando información del censo ecuatoriano para estudiar variables socioeconómicas y demográficas.",
 
-            about: {
+            "projects.software.title":
+                "Proyectos de Software",
 
-                title:
-                    "Sobre mí",
+            "projects.software.description":
+                "Colección de proyectos académicos desarrollados durante mis estudios de Ciencias de la Computación.",
 
-                paragraph1:
-                    "Soy estudiante de Ciencias de la Computación y Economía, interesado en el desarrollo de software, análisis de datos y resolución de problemas.",
+            "skills.title":
+                "Habilidades y tecnologías",
 
-                paragraph2:
-                    "Durante mi trayectoria universitaria he trabajado en proyectos relacionados con programación, desarrollo backend, análisis de datos, econometría, arquitectura de computadores e ingeniería de software.",
+            "skills.languages":
+                "Lenguajes",
 
-                paragraph3:
-                    "Me gusta aprender nuevas tecnologías y transformar conceptos teóricos en soluciones prácticas.",
+            "skills.development":
+                "Desarrollo",
 
-                education:
-                    "Educación",
+            "skills.data":
+                "Datos",
 
-                field:
-                    "Carrera",
+            "contact.title":
+                "Conectemos.",
 
-                fieldValue:
-                    "Ciencias de la Computación y Economía",
+            "contact.description":
+                "Actualmente estoy preparándome para oportunidades de pasantías y me encantaría conectar.",
 
-                status:
-                    "Estado",
-
-                semester:
-                    "Séptimo semestre",
-
-                location:
-                    "Ubicación"
-
-            },
-
-
-            projects: {
-
-                title:
-                    "Proyectos destacados",
-
-
-                tictactoe: {
-
-                    title:
-                        "Tres en Raya",
-
-                    description:
-                        "Implementación full-stack de un juego de Tres en Raya utilizando una API REST y un frontend independiente."
-
-                },
-
-
-                census: {
-
-                    title:
-                        "Análisis del Censo de Ecuador",
-
-                    description:
-                        "Proyecto de análisis de datos utilizando información del censo ecuatoriano para estudiar variables socioeconómicas y demográficas."
-
-                },
-
-
-                software: {
-
-                    title:
-                        "Proyectos de Software",
-
-                    description:
-                        "Colección de proyectos académicos desarrollados durante mis estudios de Ciencias de la Computación."
-
-                }
-
-            },
-
-
-            skills: {
-
-                title:
-                    "Habilidades y tecnologías",
-
-                languages:
-                    "Lenguajes",
-
-                development:
-                    "Desarrollo",
-
-                data:
-                    "Datos"
-
-            },
-
-
-            contact: {
-
-                title:
-                    "Conectemos.",
-
-                description:
-                    "Actualmente estoy preparándome para oportunidades de pasantías y me encantaría conectar."
-
-            },
-
-
-            footer: {
-
-                built:
-                    "Desarrollado con HTML, CSS y JavaScript"
-
-            }
-
+            "footer.built":
+                "Desarrollado con HTML, CSS y JavaScript"
         }
 
     };
 
 
     /* =====================================================
-       GET NESTED TRANSLATION
+       CHANGE LANGUAGE
     ===================================================== */
 
-    function getTranslation(language, key) {
+    function changeLanguage(language) {
 
-        const keys = key.split(".");
+        console.log("Changing language to:", language);
 
-        let value = translations[language];
+        const selectedLanguage =
+            translations[language];
 
-        for (const currentKey of keys) {
-
-            if (
-                value === undefined ||
-                value === null
-            ) {
-
-                return null;
-
-            }
-
-            value = value[currentKey];
-
-        }
-
-        return value;
-
-    }
-
-
-    /* =====================================================
-       SET LANGUAGE
-    ===================================================== */
-
-    function setLanguage(language) {
-
-        if (!translations[language]) {
-
+        if (!selectedLanguage) {
             console.error(
-                "Invalid language:",
+                "Language not found:",
                 language
             );
-
             return;
-
         }
 
 
-        /* Translate all elements */
+        /* ---------------------------------------------
+           Translate elements
+        --------------------------------------------- */
 
-        const elements =
-            document.querySelectorAll(
-                "[data-i18n]"
-            );
+        document
+            .querySelectorAll("[data-i18n]")
+            .forEach((element) => {
 
+                const key =
+                    element.dataset.i18n;
 
-        elements.forEach(function (element) {
+                if (
+                    Object.prototype.hasOwnProperty.call(
+                        selectedLanguage,
+                        key
+                    )
+                ) {
 
-            const key =
-                element.getAttribute(
-                    "data-i18n"
-                );
+                    element.textContent =
+                        selectedLanguage[key];
 
+                }
 
-            const translation =
-                getTranslation(
-                    language,
-                    key
-                );
-
-
-            if (translation !== null) {
-
-                element.textContent =
-                    translation;
-
-            }
-
-        });
+            });
 
 
-        /* Update active language button */
-
-        const languageButtons =
-            document.querySelectorAll(
-                ".language-btn"
-            );
-
-
-        languageButtons.forEach(
-            function (button) {
-
-                button.classList.remove(
-                    "active"
-                );
-
-            }
-        );
-
-
-        const activeButton =
-            document.getElementById(
-                "lang-" + language
-            );
-
-
-        if (activeButton) {
-
-            activeButton.classList.add(
-                "active"
-            );
-
-        }
-
-
-        /* Update HTML language */
+        /* ---------------------------------------------
+           Update HTML language
+        --------------------------------------------- */
 
         document.documentElement.lang =
             language;
 
 
-        /* Save preference */
+        /* ---------------------------------------------
+           Update buttons
+        --------------------------------------------- */
+
+        const englishButton =
+            document.getElementById("lang-en");
+
+        const spanishButton =
+            document.getElementById("lang-es");
+
+
+        englishButton?.classList.remove("active");
+
+        spanishButton?.classList.remove("active");
+
+
+        if (language === "en") {
+
+            englishButton?.classList.add("active");
+
+        } else {
+
+            spanishButton?.classList.add("active");
+
+        }
+
+
+        /* ---------------------------------------------
+           Save language
+        --------------------------------------------- */
 
         localStorage.setItem(
-            "preferredLanguage",
+            "portfolioLanguage",
             language
         );
 
 
         console.log(
-            "Language changed to:",
+            "Language successfully changed to:",
             language
         );
-
     }
 
 
@@ -490,26 +286,17 @@ document.addEventListener("DOMContentLoaded", function () {
     ===================================================== */
 
     const englishButton =
-        document.getElementById(
-            "lang-en"
-        );
-
+        document.getElementById("lang-en");
 
     const spanishButton =
-        document.getElementById(
-            "lang-es"
-        );
+        document.getElementById("lang-es");
 
 
     if (englishButton) {
 
         englishButton.addEventListener(
             "click",
-            function () {
-
-                setLanguage("en");
-
-            }
+            () => changeLanguage("en")
         );
 
     }
@@ -519,11 +306,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         spanishButton.addEventListener(
             "click",
-            function () {
-
-                setLanguage("es");
-
-            }
+            () => changeLanguage("es")
         );
 
     }
@@ -535,22 +318,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const savedLanguage =
         localStorage.getItem(
-            "preferredLanguage"
+            "portfolioLanguage"
         );
 
 
     if (
-        savedLanguage === "en" ||
-        savedLanguage === "es"
+        savedLanguage === "es" ||
+        savedLanguage === "en"
     ) {
 
-        setLanguage(
-            savedLanguage
-        );
+        changeLanguage(savedLanguage);
 
     } else {
 
-        setLanguage("en");
+        changeLanguage("en");
 
     }
 
@@ -560,42 +341,32 @@ document.addEventListener("DOMContentLoaded", function () {
     ===================================================== */
 
     const revealElements =
-        document.querySelectorAll(
-            ".reveal"
-        );
+        document.querySelectorAll(".reveal");
 
 
-    if (
-        "IntersectionObserver" in window
-    ) {
+    if ("IntersectionObserver" in window) {
 
         const observer =
             new IntersectionObserver(
-                function (
-                    entries,
-                    observer
-                ) {
+                (entries, observer) => {
 
-                    entries.forEach(
-                        function (entry) {
+                    entries.forEach((entry) => {
 
-                            if (
-                                entry.isIntersecting
-                            ) {
+                        if (
+                            entry.isIntersecting
+                        ) {
 
-                                entry.target.classList.add(
-                                    "visible"
-                                );
+                            entry.target.classList.add(
+                                "visible"
+                            );
 
-
-                                observer.unobserve(
-                                    entry.target
-                                );
-
-                            }
+                            observer.unobserve(
+                                entry.target
+                            );
 
                         }
-                    );
+
+                    });
 
                 },
                 {
@@ -604,27 +375,19 @@ document.addEventListener("DOMContentLoaded", function () {
             );
 
 
-        revealElements.forEach(
-            function (element) {
+        revealElements.forEach((element) => {
 
-                observer.observe(
-                    element
-                );
+            observer.observe(element);
 
-            }
-        );
+        });
 
     } else {
 
-        revealElements.forEach(
-            function (element) {
+        revealElements.forEach((element) => {
 
-                element.classList.add(
-                    "visible"
-                );
+            element.classList.add("visible");
 
-            }
-        );
+        });
 
     }
 
@@ -633,31 +396,23 @@ document.addEventListener("DOMContentLoaded", function () {
        SMOOTH SCROLL
     ===================================================== */
 
-    const internalLinks =
-        document.querySelectorAll(
-            'a[href^="#"]'
-        );
-
-
-    internalLinks.forEach(
-        function (link) {
+    document
+        .querySelectorAll('a[href^="#"]')
+        .forEach((link) => {
 
             link.addEventListener(
                 "click",
-                function (event) {
+                (event) => {
 
                     const targetId =
-                        link.getAttribute(
-                            "href"
-                        );
+                        link.getAttribute("href");
 
 
                     if (
+                        !targetId ||
                         targetId === "#"
                     ) {
-
                         return;
-
                     }
 
 
@@ -668,9 +423,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
                     if (!target) {
-
                         return;
-
                     }
 
 
@@ -684,16 +437,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             );
 
-        }
-    );
+        });
 
-
-    /* =====================================================
-       CONSOLE MESSAGE
-    ===================================================== */
 
     console.log(
-        "✓ Andrés Lanchimba Portfolio loaded successfully."
+        "✓ Portfolio JavaScript loaded correctly."
     );
 
 });
